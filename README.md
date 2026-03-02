@@ -1,6 +1,5 @@
 # ROLD — Rolling Oloid Learning Dynamics
 
-### Developable Geometry, Hopf-Linked Manifolds, and the Spectral Contact Theory of Gradient Descent
 
 > "The oloid develops its entire surface: every point touches the plane on which it rolls."
 > — Dirnböck & Stachel, *Journal for Geometry and Graphics*, 1997
@@ -470,7 +469,7 @@ The tritangentless condition is the geometric statement that **no three features
 
 $$T_{\min} = 2 + \lfloor c_- / 8 \rfloor$$
 
-When $c_- \equiv 0 \pmod 8$: $T_{\min} = 2$ (tritangentless, Morton case — gapped boundary exists). When $c_- = 8$: $T_{\min} = 3$ (tritangent planes exist — non-trivial, but bondable). This gives a geometric visualization of the mod-8 gapping obstruction.
+When $c_- \equiv 0\;(\mathrm{mod}\;8)$: $T_{\min} = 2$ (tritangentless, Morton case — gapped boundary exists). When $c_- = 8$: $T_{\min} = 3$ (tritangent planes exist — non-trivial, but bondable). This gives a geometric visualization of the mod-8 gapping obstruction.
 
 ---
 
@@ -537,7 +536,7 @@ Sphericon geometry (sharp corners, single center, no Hopf link), film rupture, c
 |---|---|
 | **OL-C1** | Contact-Transition: $L_c = \sqrt{4/3}\,r_{\text{eff}} \leftrightarrow \ell_{\text{trans}} = C_P \cdot C_\alpha^{-1/3}$ via $r_{\text{eff}} = C_P^{1/2} C_\alpha^{-1/6}$ |
 | **OL-C2** | Signal Gap: near grokking frontier, $C_\alpha - 1 \approx (1-\sqrt{2/3}) \cdot r_{\text{eff}}/C_P \approx 0.1835/\sqrt{\lambda_1 C_P}$ |
-| **OL-C3** | Spectral Volume: $V_{\text{condensate}} = \tfrac{2\pi}{3} C_P^{3/2}[K(C_\alpha^{-1/2}) + E(C_\alpha^{-1/2}) - 1]$; equals $V_{\mathcal{O}}$ at $C_\alpha = 2$ |
+| **OL-C3** | Spectral Volume: $V_{\text{condensate}} = \frac{2\pi}{3} C_P^{3/2}[K(C_\alpha^{-1/2}) + E(C_\alpha^{-1/2}) - 1]$; equals $V_{\mathcal{O}}$ at $C_\alpha = 2$ |
 | **OL-C4** | Morton-Anomaly: minimum number of tangent planes on rolling-knot model $= 2 + \lfloor c_-/8 \rfloor$ |
 | **OL-C5** | The ratio $V_{\mathcal{O}}/V_{\text{sphere}} \approx 0.9623$ equals the condensate fraction $n_s/n_{\text{total}}$ at the KE fixed point (ETF neural collapse), measurable as the fraction of gradient eigenvalues captured in the BCS condensate |
 | **OL-C6** | Adam optimizer is the dynamical adjustment $d_t \to \sqrt{2}\,r$ (isotropic noise tuning): the per-coordinate LR rescaling $\eta/\sqrt{v_t}$ minimizes $|d_t - \sqrt{2}\,r|^2$ in expectation, and Adam-trained networks are torsion-freer ($H \approx 0$) than SGD-trained networks |
