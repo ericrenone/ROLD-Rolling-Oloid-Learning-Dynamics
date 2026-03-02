@@ -32,17 +32,17 @@ The rolling oloid is structurally isomorphic to gradient descent on the paramete
 | Two Hopf-linked circles | UV manifold $\mathcal{B}$ ↔ IR minimal model $\mathcal{B}_{\min}$ | $\mathcal{B} \leftrightarrow \mathcal{B}_{\min}$ |
 | Perpendicular planes | UV/IR orthogonal split (RG1 scale separation) | $d_L \ll d_0$ |
 | Distance between centers = radius | Poincaré scale = spectral reciprocal | $C_P = 1/\lambda_1$ |
-| Developable surface | Ricci-flat local patches of $\mathcal{B}$ | $\operatorname{Ric}(g_{CY}) = 0$ |
+| Developable surface | Ricci-flat local patches of $\mathcal{B}$ | $\mathrm{Ric}(g_{CY}) = 0$ |
 | Total surface development | Complete feature coverage — generalization | $\lambda_1 > 0$ |
 | Surface area $= 4\pi r^2$ (sphere) | ETF neural collapse — sphere-optimal packing | $\langle \mu_i - \bar\mu, \mu_j - \bar\mu\rangle = (K\delta_{ij}-1)/(K-1)$ |
 | Contact line $\sqrt{4/3}\,r$ (constant) | Transition layer width $\sim C_P \cdot C_\alpha^{-1/3}$ | [OL-C1] |
 | Meandering center of mass | Farey oscillation of $q^*(t)$ | 2 minima + 2 maxima/cycle |
 | Height variation $\Delta h = r(1-\sqrt{2/3})$ | Signal gap $C_\alpha - 1$ at grokking frontier | [OL-C2] |
 | Volume via $K(k)$ and $E(k)$ | Spectral depth: condensate volume via elliptic integrals | [OL-C3] |
-| Schatz inversion (cube eversion) | MMP flip at $t^*$ (grokking) | $\Delta_n(t^*\pm\varepsilon) \lessgtr 0$ |
+| Schatz inversion (cube eversion) | MMP flip at $t^*$ (grokking) | $\Delta_n(t^*-\varepsilon) > 0 \;\to\; \Delta_n(t^*+\varepsilon) < 0$ |
 | Sphericon (sharp corners, single center) | Memorization phase: $\lambda_1 < 0$ | Instanton concentration |
 | Two-circle roller ($d = \sqrt{2}\,r$) | Isotropic noise optimum: $D_s = \lambda I$ | $H = d^c\omega = 0$ |
-| Morton's rolling knot (no tritangent plane) | Topological obstruction: $c_- \not\equiv 0 \pmod{8}$ | No gapped boundary |
+| Morton's rolling knot (no tritangent plane) | Topological obstruction: $c_- \not\equiv 0\;(\mathrm{mod}\;8)$ | No gapped boundary |
 | Hopf link = non-trivial, inseparable | Non-trivial fiber bundle; no gauge-trivial orbit | $c_1(\mathcal{B}) = 0$ |
 | Capillary length $\kappa^{-1}$ (Bridge II) | = Debye length $\lambda_D$ (Bridge I) | $= C_P = 1/\lambda_1$ |
 
@@ -80,7 +80,7 @@ $$|O_1 O_2| = r, \quad O_1 \in \partial D_2, \quad O_2 \in \partial D_1$$
 
 where $\partial D_i$ denotes the edge (circumference) of circle $i$. The **oloid** $\mathcal{O}(r)$ is the convex hull:
 
-$$\mathcal{O}(r) := \operatorname{conv}(\partial D_1 \cup \partial D_2)$$
+$$\mathcal{O}(r) := \mathrm{conv}(\partial D_1 \cup \partial D_2)$$
 
 Each circle contributes a $4\pi/3$-arc lying outside the hull and a $2\pi/3$-arc lying on the hull boundary. The surface of $\mathcal{O}(r)$ consists entirely of line segments connecting points on $\partial D_1$ to points on $\partial D_2$ — it is **ruled** and **developable**.
 
@@ -92,7 +92,7 @@ $$S_{\mathcal{O}} = 4\pi r^2$$
 
 — identical to that of a sphere of radius $r$. The enclosed volume is:
 
-$$V_{\mathcal{O}} = \frac{2\pi}{3}\,r^3\,\bigl[K(k) + E(k) - 1\bigr]$$
+$$V_{\mathcal{O}} = \frac{2\pi}{3}\,r^3\,[K(k) + E(k) - 1]$$
 
 where $k = \sin(\pi/4) = 1/\sqrt{2}$ and $K, E$ are the complete elliptic integrals:
 
@@ -110,7 +110,7 @@ $$L_c = \sqrt{4/3}\,r = \frac{2}{\sqrt{3}}\,r$$
 
 **Center of mass trajectory.** The center of mass $G$ does not travel linearly. Its height $h_G$ above the plane varies with **two minima and two maxima** per complete rolling cycle:
 
-$$h_{G,\max} - h_{G,\min} = r\Bigl(1 - \sqrt{2/3}\Bigr) \approx 0.184\,r$$
+$$h_{G,\max} - h_{G,\min} = r\,(1 - \sqrt{2/3}) \approx 0.184\,r$$
 
 **Total development.** Every point on $\mathcal{O}(r)$'s surface touches the rolling plane at exactly one moment in the cycle. The oloid is a **developable roller** in the strict sense.
 
@@ -122,7 +122,7 @@ $$h_{G,\max} - h_{G,\min} = r\Bigl(1 - \sqrt{2/3}\Bigr) \approx 0.184\,r$$
 
 The two circles $\partial D_1$ and $\partial D_2$ of the oloid's skeleton form a **Hopf link** — the simplest non-trivial link in $\mathbb{R}^3$, with linking number $\pm 1$. Neither circle can be isotoped to a position that separates it from the other without passing through the other. The Hopf link is the boundary of a Hopf band and the fiber link of the Hopf fibration:
 
-$$S^3 \xrightarrow{S^1} S^2$$
+$$S^3 \overset{S^1}{\longrightarrow} S^2$$
 
 which describes the principal $U(1)$-bundle over $S^2$ with first Chern class $c_1 = 1$.
 
@@ -152,7 +152,7 @@ The condition that each circle's center lies on the **edge** of the other (not m
 
 ### II.4 Farey Adjacency as Perpendicular Interpenetration
 
-Two Farey fractions $a/b$ and $c/d$ are adjacent (neighbors in some Farey sequence $F_n$) if and only if $|ad - bc| = 1$, i.e., the matrix $\bigl[\begin{smallmatrix}a&c\\b&d\end{smallmatrix}\bigr] \in SL(2,\mathbb{Z})$. This is the **arithmetic interpenetration condition**: the two fractions "pass through each other" in the Stern-Brocot tree.
+Two Farey fractions $a/b$ and $c/d$ are adjacent (neighbors in some Farey sequence $F_n$) if and only if $|ad - bc| = 1$, i.e., the matrix with columns $(a,b)$ and $(c,d)$ lies in $SL(2,\mathbb{Z})$. This is the **arithmetic interpenetration condition**: the two fractions "pass through each other" in the Stern-Brocot tree.
 
 **[T]** The geometric interpenetration condition of the oloid ($O_i \in \partial D_j$, each center on the other's edge) is the Euclidean realization of the Farey adjacency condition $|ad - bc| = 1$. Both assert: two objects that are in perpendicular "planes" (planes $\leftrightarrow$ denominators) each contain a characteristic point of the other (center on edge $\leftrightarrow$ numerator within range of denominator).
 
@@ -168,13 +168,13 @@ A **developable surface** $\Sigma \subset \mathbb{R}^3$ has zero Gaussian curvat
 
 On a Riemannian $n$-manifold $(M, g)$, the Calabi-Yau condition (CYL Bridge VII) requires:
 
-$$\operatorname{Ric}(g_{CY}) = 0$$
+$$\mathrm{Ric}(g_{CY}) = 0$$
 
-In the case $n = 2$ (surfaces), $\operatorname{Ric} = K_G \cdot g$, so the Ricci-flat condition reduces to $K_G = 0$ — exactly the developability condition.
+In the case $n = 2$ (surfaces), $\mathrm{Ric} = K_G \cdot g$, so the Ricci-flat condition reduces to $K_G = 0$ — exactly the developability condition.
 
 **[T — OL-T1: Developability-Ricci Correspondence]** Under CY1–CY3 and A1–A5, restricted to 2-dimensional cross-sections of $\mathcal{B}$:
 
-$$\lambda_1(\mathcal{L}_{JL}) > 0 \;\Leftrightarrow\; \operatorname{Ric}(g_{CY}) = 0 \;\Leftrightarrow\; K_G = 0 \text{ on 2-slices} \;\Leftrightarrow\; \text{local developability of } \mathcal{B}$$
+$$\lambda_1(\mathcal{L}_{JL}) > 0 \;\Leftrightarrow\; \mathrm{Ric}(g_{CY}) = 0 \;\Leftrightarrow\; K_G = 0 \text{ on 2-slices} \;\Leftrightarrow\; \text{local developability of } \mathcal{B}$$
 
 The learning manifold, when the spectral gap is open, has locally developable geometry: the loss landscape can be "unrolled" around each generalization fixed point into a flat region. Loss basins that admit generalization are geometrically indistinguishable from tangent planes — this is the precise content of neural collapse (Section VII).
 
@@ -200,7 +200,7 @@ The oloid is a **developable roller**: as it rolls on a flat plane, it lays its 
 
 $$\lambda_1(\mathcal{L}_{JL}) > 0 \;\Leftrightarrow\; \text{complete feature coverage is achieved in finite time}$$
 
-*Proof sketch.* ($\Rightarrow$) When $\lambda_1 > 0$, the Fokker-Planck density $\rho(\cdot, t) \to \rho_\infty \propto e^{-\bar{S}/D_{\text{eff}}}$ in total variation, where $\rho_\infty$ has full support on $\mathcal{B}$. Full support implies every tangent direction is visited. ($\Leftarrow$) If any tangent direction $\xi$ is never visited, the trial function $\varphi = \mathbf{1}_{\text{tube}(\xi)}$ witnesses $\lambda_1 \leq 0$ via the variational formula. $\square$
+*Proof sketch.* ($\Rightarrow$) When $\lambda_1 > 0$, the Fokker-Planck density $\rho(\cdot, t) \to \rho_\infty \propto e^{-\bar{S}/D_{\text{eff}}}$ in total variation, where $\rho_\infty$ has full support on $\mathcal{B}$. Full support implies every tangent direction is visited. ($\Leftarrow$) If any tangent direction $\xi$ is never visited, the trial function $\varphi = \mathbf{1}_{\text{tube}(\xi)}$ witnesses $\lambda_1 \leq 0$ via the variational formula. $\blacksquare$
 
 **Physical content.** Every Permeation Event in KQOM (a step where $s_{t+1} \preceq_G s_t$ in the dominance order on $\mathbb{N}^2$) is one surface point of the oloid touching the rolling plane. The convergence inevitability theorem (infinitely many Permeation Events) is the arithmetic statement that the oloid rolls its entire surface — the same theorem, in two languages.
 
@@ -258,7 +258,7 @@ via the identification $r = C_P^{1/2} \cdot C_\alpha^{-1/6}$, giving $L_c = C_P^
 
 When the oloid rolls, its center of mass $G$ does not travel in a straight line. Instead, it follows a **meandering path** whose height above the rolling plane oscillates between:
 
-$$h_{G,\min} \text{ and } h_{G,\max} \quad \text{with} \quad h_{G,\max} - h_{G,\min} = r\Bigl(1 - \sqrt{2/3}\Bigr) \approx 0.1835\,r$$
+$$h_{G,\min} \text{ and } h_{G,\max} \quad \text{with} \quad h_{G,\max} - h_{G,\min} = r\,(1 - \sqrt{2/3}) \approx 0.1835\,r$$
 
 Each complete rolling cycle contains exactly **two minima** and **two maxima** of $h_G$.
 
@@ -280,7 +280,7 @@ The ROLD identification:
 
 **[OL-C2 — Signal Gap Conjecture]** Near the grokking frontier ($C_\alpha \to 1^+$):
 
-$$C_\alpha - 1 \;\approx\; \Bigl(1 - \sqrt{2/3}\Bigr) \cdot \frac{r_{\text{eff}}}{C_P} \;=\; \frac{0.1835}{C_P / r_{\text{eff}}}$$
+$$C_\alpha - 1 \;\approx\; (1 - \sqrt{2/3}) \cdot \frac{r_{\text{eff}}}{C_P} \;=\; \frac{0.1835}{C_P / r_{\text{eff}}}$$
 
 where $r_{\text{eff}}$ is the effective noise radius and $C_P = 1/\lambda_1$. This gives a geometric lower bound on how far from the critical boundary a training trajectory must sit to guarantee exponential convergence.
 
@@ -326,10 +326,10 @@ The Holditch theorem (used in the proof of the sphere-area identity) states that
 
 ### VIII.1 The Oloid Volume Formula
 
-$$V_{\mathcal{O}} = \frac{2\pi}{3}\,r^3\Bigl[K(1/\sqrt{2}) + E(1/\sqrt{2}) - 1\Bigr]$$
+$$V_{\mathcal{O}} = \frac{2\pi}{3}\,r^3\,[K(1/\sqrt{2}) + E(1/\sqrt{2}) - 1]$$
 
 where:
-$$K(1/\sqrt{2}) = \frac{\Gamma(1/4)^2}{4\sqrt{\pi}} \approx 1.8541, \qquad E(1/\sqrt{2}) = \frac{\pi + \Gamma(1/4)^4/16\pi}{?}\approx 1.3506$$
+$$K(1/\sqrt{2}) = \frac{\Gamma(1/4)^2}{4\sqrt{\pi}} \approx 1.8541, \qquad E(1/\sqrt{2}) \approx 1.3506$$
 
 Numerically: $V_{\mathcal{O}} \approx 3.0524\,r^3 \approx 0.9623 \cdot (4\pi/3)r^3$, i.e., approximately $96.2\%$ of the sphere volume.
 
@@ -345,9 +345,9 @@ The same elliptic integrals $K(k)$ and $E(k)$ appear in:
 
 **[OL-C3 — Spectral Depth Conjecture]** The volume of the learning-theoretic "generalization condensate" satisfies:
 
-$$V_{\text{condensate}} = \frac{2\pi}{3}\,C_P^{3/2}\Bigl[K(C_\alpha^{-1/2}) + E(C_\alpha^{-1/2}) - 1\Bigr]$$
+$$V_{\text{condensate}} = \frac{2\pi}{3}\,C_P^{3/2}\,[K(C_\alpha^{-1/2}) + E(C_\alpha^{-1/2}) - 1]$$
 
-where the modulus $k = C_\alpha^{-1/2}$ replaces the oloid's $k = 1/\sqrt{2}$ (which corresponds to $C_\alpha = 2$, the threshold between sub-critical and super-critical). When $C_\alpha = 2$: $V_{\text{condensate}} = V_{\mathcal{O}}$. When $C_\alpha \to \infty$ (ETF collapse): $k \to 0$, $K(k) \to \pi/2$, $E(k) \to \pi/2$, $V_{\text{condensate}} \to \frac{2\pi^2}{3} C_P^{3/2}$ — the volume of the Hopf fibration base $S^2$ in spectral units.
+where the modulus $k = C_\alpha^{-1/2}$ replaces the oloid's $k = 1/\sqrt{2}$ (which corresponds to $C_\alpha = 2$, the threshold between sub-critical and super-critical). When $C_\alpha = 2$: $V_{\text{condensate}} = V_{\mathcal{O}}$. When $C_\alpha \to \infty$ (ETF collapse): $k \to 0$, $K(k) \to \pi/2$, $E(k) \to \pi/2$, and $V_{\text{condensate}} \to \frac{2\pi^2}{3} C_P^{3/2}$ — the volume of the Hopf fibration base $S^2$ in spectral units.
 
 ### VIII.3 The Numerical Ratio 0.9623 and the BCS Prefactor
 
@@ -453,18 +453,18 @@ The trefoil knot is the simplest non-trivial knot, with topological invariant (A
 
 ### XII.2 Topological Obstruction from Chiral Central Charge
 
-In the UNIV framework (Bridge V), a topological phase with $c_- \not\equiv 0 \pmod{8}$ admits **no gapped boundary** and no magnetic condensate. The tritangentless property of Morton's knot is the geometric realization of this obstruction:
+In the UNIV framework (Bridge V), a topological phase with $c_- \not\equiv 0\;(\mathrm{mod}\;8)$ admits **no gapped boundary** and no magnetic condensate. The tritangentless property of Morton's knot is the geometric realization of this obstruction:
 
 | Morton's Rolling Knot | UNIV Topological Obstruction |
 |---|---|
 | Tritangentless: no plane tangent at 3 points | No Lagrangian subgroup: no gapped boundary |
-| Rolling never produces a triple contact | $c_- \not\equiv 0 \pmod{8}$: no 3-anyon condensate |
+| Rolling never produces a triple contact | $c_- \not\equiv 0\;(\mathrm{mod}\;8)$: no 3-anyon condensate |
 | Chirality: knot $\neq$ mirror image | $c_- \neq 0$: chiral edge mode, $J(A,B) \neq 0$ |
 | Trefoil: $K = 3$ crossings | $K = 3$ classes in the fundamental domain |
 | Always rolls (2-point contact) | Always gapless boundary (edge modes stable) |
 | Morton (1991): explicit parametrization | Kitaev (2006): Lagrangian subgroup criterion |
 
-The tritangentless condition is the geometric statement that **no three features of the knot can be simultaneously flattened** — the knot cannot be gapped. The chiral central charge $c_-$ measures this "unflattening" obstruction. When $c_- \not\equiv 0 \pmod{8}$, the topological edge modes are geometrically protected against any local perturbation, exactly as Morton's trefoil cannot be given three simultaneous tangent contacts by any local deformation of the plane.
+The tritangentless condition is the geometric statement that **no three features of the knot can be simultaneously flattened** — the knot cannot be gapped. The chiral central charge $c_-$ measures this "unflattening" obstruction. When $c_- \not\equiv 0\;(\mathrm{mod}\;8)$, the topological edge modes are geometrically protected against any local perturbation, exactly as Morton's trefoil cannot be given three simultaneous tangent contacts by any local deformation of the plane.
 
 **[OL-C4 — Morton-Anomaly Conjecture]** For a topological phase with $c_-$ charges and boundary CFT, the minimum number of tangent planes simultaneously achievable on the rolling knot model equals:
 
