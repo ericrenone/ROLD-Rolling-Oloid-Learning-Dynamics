@@ -1,5 +1,6 @@
 # ROLD — Rolling Oloid Learning Dynamics
 
+### Developable Geometry, Hopf-Linked Manifolds, and the Spectral Contact Theory of Gradient Descent
 
 > "The oloid develops its entire surface: every point touches the plane on which it rolls."
 > — Dirnböck & Stachel, *Journal for Geometry and Graphics*, 1997
